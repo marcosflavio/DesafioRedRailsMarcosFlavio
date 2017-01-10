@@ -1,4 +1,24 @@
 Rails.application.routes.draw do
+  # Aqui são definidas todas as rotas para as Páginas contidas em view/pages
+  
+  #Rota para a action index no controller/pages_controller
+  get '/index' =>  'pages#index'
+  
+  #Rota para a action home no controller/pages_controller
+  get '/home'  =>  'pages#home'
+
+  #Rota para a action profile no controller/pages_controller
+  get '/profile' =>  'pages#profile'
+  
+  #Rota para a action explore no controller/pages_controller
+  get '/explore' =>  'pages#explore'
+  
+  #Declarando a página principal da aplicação
+  root 'pages#index'
+  
+  
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
