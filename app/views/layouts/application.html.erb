@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Redwitter</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Redwitter</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<%# Incluindo o navbar ao layout da aplicação %>
-<%# Navbar global! %>
-<%= render '/layouts/navbar' %>
+    <%# Incluindo o navbar ao layout da aplicação %>
+    <%# Navbar global! %>
+    <%= render '/layouts/navbar' %>
 
-<%= yield %>
+    <div class="container">
+  
+      <%# Renderizo uma determinada página aqui neste layout%>
+      <%= yield %>
 
-</body>
+    </div>
+
+  </body>
 </html>
