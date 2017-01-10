@@ -1,7 +1,7 @@
 == README
 
 ~~~REDWITTER~~~
-<font face="verdana" color="red"> REDWITTER </font>
+
 Aplicação em Rails para o Desafio da RedRocket
 
 A aplicação é o Redwitter, que é basicamente uma cópia do Twitter 
