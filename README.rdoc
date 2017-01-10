@@ -1,28 +1,21 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+~~~REDWITTER~~~
 
-Things you may want to cover:
+Aplicação em Rails para o Desafio da RedRocket
 
-* Ruby version
+A aplicação é o Redwitter, que é basicamente uma cópia do Twitter 
 
-* System dependencies
+A aplicação foi desenvolvida em Ruby utilizando o Framework Rails
 
-* Configuration
+Versão do Ruby  : ruby 2.3.0p0 (2015-12-25 revision 53290) 
+Versão do Rails : Rails 4.2.5
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ao decorrer do desenvolvimento, este documento será modificado com as atualizações!
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+att,
+
+
+Marcos Flávio Silveira Alves
