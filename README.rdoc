@@ -25,5 +25,10 @@ Marcos Flávio Silveira Alves
     
 O layout utilizado foi retirado a partir do http://getbootstrap.com/ . Onde, foram encontrados os componentes e
 templates necessários para o desenvolvimento do Redwitter
-O bootstrap utilizado para "copiar" o twitter foi retirado de https://github.com/twbs/bootstrap-sass ;
+O bootstrap utilizado para "copiar" o twitter foi retirado de https://github.com/twbs/bootstrap-sass
+Container utilizado foi retirado de http://getbootstrap.com/css/#grid
+Painels utilizados foram retirados de http://getbootstrap.com/components/#panels
+Foi utilizada também a classe Jumbotron para o painel header, retirado de http://getbootstrap.com/components/#jumbotron
+
+
     
