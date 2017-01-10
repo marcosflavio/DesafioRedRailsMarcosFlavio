@@ -31,4 +31,11 @@ Painels utilizados foram retirados de http://getbootstrap.com/components/#panels
 Foi utilizada também a classe Jumbotron para o painel header, retirado de http://getbootstrap.com/components/#jumbotron
 
 
+== 2.0 Autorização
+
+Para o uso de autenticação na aplicação foi utilizado o Devise, que é uma solução flexível para autenticação de aplicações
+desenvolvidas em Rails. Foi obtido a partir do repositório: https://github.com/plataformatec/devise onde contém mais
+informações e um tutorial de como utilizala.
+
+
     
