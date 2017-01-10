@@ -244,3 +244,121 @@ Cannot render console from 179.236.9.38! Allowed networks: 127.0.0.1, ::1, 127.0
 
 Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 179.236.9.38 at 2017-01-10 19:57:41 +0000
 Cannot render console from 179.236.9.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 179.236.9.38 at 2017-01-10 20:01:08 +0000
+Cannot render console from 179.236.9.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 269ms (Views: 260.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.9.38 at 2017-01-10 20:08:56 +0000
+Cannot render console from 179.236.9.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 146ms (Views: 145.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.9.38 at 2017-01-10 20:09:10 +0000
+Cannot render console from 179.236.9.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 365ms (Views: 352.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.9.38 at 2017-01-10 20:11:11 +0000
+Cannot render console from 179.236.9.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 190ms (Views: 188.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.9.38 at 2017-01-10 20:12:59 +0000
+Cannot render console from 179.236.9.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 121ms (Views: 120.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.9.38 at 2017-01-10 20:14:09 +0000
+Cannot render console from 179.236.9.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 44ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.9.38 at 2017-01-10 20:14:49 +0000
+Cannot render console from 179.236.9.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 48ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.9.38 at 2017-01-10 20:16:16 +0000
+Cannot render console from 179.236.9.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 45ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.9.38 at 2017-01-10 20:17:24 +0000
+Cannot render console from 179.236.9.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 39ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.9.38 at 2017-01-10 20:18:10 +0000
+Cannot render console from 179.236.9.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 65ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.9.38 at 2017-01-10 20:21:19 +0000
+Cannot render console from 179.236.9.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 59ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.9.38 at 2017-01-10 20:24:27 +0000
+Cannot render console from 179.236.9.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 202ms (Views: 200.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.9.38 at 2017-01-10 20:24:35 +0000
+Cannot render console from 179.236.9.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 129ms (Views: 128.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.9.38 at 2017-01-10 20:24:48 +0000
+Cannot render console from 179.236.9.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 42ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.9.38 at 2017-01-10 20:24:52 +0000
+Cannot render console from 179.236.9.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 42ms (Views: 41.9ms | ActiveRecord: 0.0ms)
