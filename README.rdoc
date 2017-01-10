@@ -23,5 +23,7 @@ Marcos Flávio Silveira Alves
 
 == 1.0 Descrição do Layout utilizado
     
-    O layout utilizado foi retirado a partir do http://getbootstrap.com/ . Onde, foram encontrados os componentes e
-    templates necessários para o desenvolvimento do Redwitter
+O layout utilizado foi retirado a partir do http://getbootstrap.com/ . Onde, foram encontrados os componentes e
+templates necessários para o desenvolvimento do Redwitter
+O bootstrap utilizado para "copiar" o twitter foi retirado de https://github.com/twbs/bootstrap-sass ;
+    
