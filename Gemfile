@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#Importando Devise gem para a autenticação da aplicação
+gem 'devise'
+
 #Importando os componentes do bootstrap 
 gem 'bootstrap-sass', '~> 3.3.6'
 

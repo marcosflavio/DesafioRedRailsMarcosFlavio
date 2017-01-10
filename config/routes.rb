@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  
+  devise_for :users
   # Aqui são definidas todas as rotas para as Páginas contidas em view/pages
   
   #Rota para a action index no controller/pages_controller
