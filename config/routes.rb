@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get '/home'  =>  'pages#home'
 
   #Rota para a action profile no controller/pages_controller
-  get '/profile' =>  'pages#profile'
+  get '/user/:id' =>  'pages#profile'
   
   #Rota para a action explore no controller/pages_controller
   get '/explore' =>  'pages#explore'
