@@ -1,11 +1,11 @@
-class PostsController < ApplicationController
-   
-   def new
-    @redweet = Post.new
-   end
+class RedweetsController < ApplicationController
+    
+    def new
+    @redweet = Redweet.new
+    end
    
    def create
-     @redweet = Post.new(post_params)
+     @redweet = Redweet.new(redweet_params)
      @redweet.user_id = current_user.id #o redweet recebe o id do usuario que o fez
     respond_to do |f|
         if(@redweet.save)
@@ -18,9 +18,9 @@ class PostsController < ApplicationController
    
    #Metodo para definir quais os parametros que formam um redweet(post)
    private
-   def post_params
-    params.require(:post).permit(:user_id, :content)
+   def redweet_params
+    params.require(:redweet).permit(:user_id, :content)
     
    end
+
 end
- 

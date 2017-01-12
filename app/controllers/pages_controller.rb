@@ -7,7 +7,7 @@ class PagesController < ApplicationController
 
   #Action para pages/home
   def home
-    @posts = Post.all
+    @redweets = Redweet.all
   end
   
   #Action para pages/profile
@@ -22,16 +22,16 @@ class PagesController < ApplicationController
     end
     
     #disponibilizando somente os posts do proprio usuario
-    #@posts = Post.all.where("user_id = ?", User.find_by_username(params[:id]).id)
-    @posts = Post.all
+    #@posts = Redweet.all.where("user_id = ?", User.find_by_username(params[:id]).id)
+    @redweets = Redweet.all
     
     #variavel para criar um novo redweet 
-    @newRedweet = Post.new
+    @newRedweet = Redweet.new
   end
   
   #Action para pages/explore
   def explore
-    @posts = Post.all
+    @redweets = Redweet.all
   end
   
 end
