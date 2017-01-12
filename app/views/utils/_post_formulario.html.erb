@@ -1,0 +1,14 @@
+
+<%= form_for(@newRedweet) do |f| %>
+  <center>
+      <div class="field">
+        <%= f.label :Redweet %><br />
+        <%= f.text_field :content, autofocus: true %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Novo" %>
+      </div>
+      
+  </center>
+<% end %>

@@ -22,11 +22,17 @@
     </div>
     
     <div class="col-xs-6">
-        <div class="panel panel-default">
-          <div class="panel-body">
-             <p>Redweets</p>
-          </div>
-        </div>
+        
+        <%= render '/utils/post_formulario' %><br/>    
+        
+        <%for @post in @posts %>
+            <div class="panel panel-default">
+              <div class="panel-body">
+              
+                 <p> <%= @post.content %> </p>
+              </div>
+            </div>
+         <% end %>
     </div>
     
     <div class="col-xs-3">
@@ -37,12 +43,7 @@
         </div>
     </div>
     
-</div>
-
-<!-- Terceira row -->
-<div class="row">
-    
-    <div class="col-xs-3 col-xs-offset-9">
+    <div class="col-xs-3">
         <div class="panel panel-default">
           <div class="panel-body">
              <p>Trends</p>
@@ -51,3 +52,4 @@
     </div>
     
 </div>
+
