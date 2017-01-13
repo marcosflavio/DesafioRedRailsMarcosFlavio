@@ -25,7 +25,7 @@
           <div class="panel-body row">
             
             <div class="col-sm-1">
-              <img src="/redlogo1.png" class="rounded-img" height="50px" width="50px"></img>
+              <img src="/egg.jpg" class="rounded-img" height="50px" width="50px"></img>
             </div>
             <div class="col-sm-11">
               <p class="post-title"><span class="post-owner"><a href="/user/<%= User.find(@redweet.user_id).username %>"><%= User.find(@redweet.user_id).username %></a></span> <span class="post-creation">- <%= @redweet.created_at.to_formatted_s(:short) %></span></p>
@@ -45,6 +45,16 @@
           </div>
         </div>
          <% end %>
+         
+         <div class="panel panel-default post-panel">
+          <div class="panel-body row">
+            <div class="col-sm-12">
+            <center><img src="/redlogo.png" height="25px" width="25px"></img>
+              <a href="#top"><p class="opacity: .7;"> <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></p></a></center>
+            </div>
+          </div>
+        </div>
+         
         </div>
     
     <div class="col-xs-3">
