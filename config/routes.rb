@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   root 'pages#index'
   
   
-  #Desclaracao para utilizar post html
+  #Desclaracao para utilizar 
   resources :redweets
   
   # The priority is based upon order of creation: first created -> highest priority.

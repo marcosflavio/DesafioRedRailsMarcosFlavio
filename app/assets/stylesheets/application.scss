@@ -15,14 +15,25 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.new input{
+  height: 45px;
+}
+
+.containerRed {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
 body{
     background-color:#f5f8fa;
 }
 #ffffff
-.navbar{
+.navbarsasas{
     background-color: #ffffff;
 }
-.navbarRocket{
+.navbar{
     background-color: #000000 !important;
 }
 .navbar-brand{
