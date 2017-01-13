@@ -38,4 +38,6 @@ desenvolvidas em Rails. Foi obtido a partir do repositório: https://github.com/
 informações e um tutorial de como utilizala.
 
 
+== 3.0 Models
+
     
