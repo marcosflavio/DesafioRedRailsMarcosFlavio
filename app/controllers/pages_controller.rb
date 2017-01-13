@@ -28,11 +28,15 @@ class PagesController < ApplicationController
     
     #variavel para criar um novo redweet 
     @newRedweet = Redweet.new
+     @quemSeguir = User.all.last(7)
   end
   
   #Action para pages/explore
-  def explore
+  def moments
+    @newRedweet = Redweet.new
     @redweets = Redweet.all
+    @quemSeguir = User.all.last(7)
+    
   end
   
 end

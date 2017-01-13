@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get '/user/:id' =>  'pages#profile'
   
   #Rota para a action explore no controller/pages_controller
-  get '/explore' =>  'pages#explore'
+  get '/moments' =>  'pages#moments'
   
   #Declarando a página principal da aplicação
   root 'pages#index'
