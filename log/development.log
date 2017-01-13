@@ -8389,3 +8389,1326 @@ Processing by PagesController#index as HTML
   Rendered layouts/_navbar_guest.html.erb (0.3ms)
   Rendered layouts/_navbar.html.erb (1.1ms)
 Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:40:27 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_navbar_guest.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 365ms (Views: 352.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 179.236.8.213 at 2017-01-13 04:40:31 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (10.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (53.0ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 112ms (Views: 97.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/sign_in" for 179.236.8.213 at 2017-01-13 04:40:33 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fdNSqO+3XJ+a/wgJ6/RMcDkVQLHzTn4DEzwwu2jJaz+XKPVbXrXnn9jsy+IxKWeSUrOuotHqNhQaUstl5W4xdw==", "user"=>{"email"=>"maria@maia", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "maria@maia"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2017-01-13 04:39:12.854985"], ["current_sign_in_at", "2017-01-13 04:40:33.980111"], ["sign_in_count", 12], ["updated_at", "2017-01-13 04:40:33.981261"], ["id", 4]]
+  [1m[36m (9.8ms)[0m  [1mcommit transaction[0m
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 200ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:40:34 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navbar_user.html.erb (0.8ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+Completed 200 OK in 37ms (Views: 36.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/index" for 179.236.8.213 at 2017-01-13 04:40:57 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbar_user.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 49ms (Views: 48.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/maria" for 179.236.8.213 at 2017-01-13 04:41:05 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"maria"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "maria"]]
+  Rendered utils/_redweet_form.html.erb (1.9ms)
+  [1m[36mRedweet Load (0.2ms)[0m  [1mSELECT "redweets".* FROM "redweets"  ORDER BY "redweets"."created_at" DESC[0m
+  Rendered pages/profile.html.erb within layouts/application (4.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 59ms (Views: 43.2ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/users/sign_out" for 179.236.8.213 at 2017-01-13 04:42:27 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/y0PV4pyPpgQ3JZBP4oEPLLwDpjrQtqNd9AzyLMIdCEWChS9EXTEn9VhjQ+st6XjNYidBsiUWq5Ee4RzDVr+Eg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 14ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:42:28 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  Rendered utils/_redweet_form.html.erb (1.7ms)
+  [1m[36mRedweet Load (0.2ms)[0m  [1mSELECT "redweets".* FROM "redweets"  ORDER BY "redweets"."created_at" DESC[0m
+  Rendered pages/profile.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 51ms (Views: 43.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:42:36 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  Rendered utils/_redweet_form.html.erb (1.0ms)
+  [1m[36mRedweet Load (0.2ms)[0m  [1mSELECT "redweets".* FROM "redweets"  ORDER BY "redweets"."created_at" DESC[0m
+  Rendered pages/profile.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 47ms (Views: 44.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for 179.236.8.213 at 2017-01-13 04:42:59 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (3.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 179.236.8.213 at 2017-01-13 04:43:01 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r8k6QfifCn+UGPt18lp9Mt1/vFejKDUtMZCZHGpv6XS1k+On4FRtAorSa1G9P93vjmBO2ryXi84x0f26gEJypQ==", "user"=>{"email"=>"maria@maia", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "maria@maia"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2017-01-13 04:40:33.980111"], ["current_sign_in_at", "2017-01-13 04:43:01.292187"], ["sign_in_count", 13], ["updated_at", "2017-01-13 04:43:01.293220"], ["id", 4]]
+  [1m[36m (52.8ms)[0m  [1mcommit transaction[0m
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 201ms (ActiveRecord: 53.5ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:43:01 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  Rendered utils/_redweet_form.html.erb (1.2ms)
+  [1m[36mRedweet Load (0.2ms)[0m  [1mSELECT "redweets".* FROM "redweets"  ORDER BY "redweets"."created_at" DESC[0m
+  Rendered pages/profile.html.erb within layouts/application (2.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered layouts/_navbar_user.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 47ms (Views: 44.8ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 179.236.8.213 at 2017-01-13 04:44:09 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NKmYwaZvvvNa3wEFZV5FkxxAqq5RAQebBZpxag53NBvDVI3nRVkzs1/yZGhcYOc4d9AJApTRQ/UddreDbYaxmg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:44:09 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  Rendered utils/_redweet_form.html.erb (1.3ms)
+  [1m[36mRedweet Load (0.3ms)[0m  [1mSELECT "redweets".* FROM "redweets"  ORDER BY "redweets"."created_at" DESC[0m
+  Rendered pages/profile.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+Completed 200 OK in 187ms (Views: 184.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:44:52 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 49ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 179.236.8.213 at 2017-01-13 04:45:16 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 122ms (Views: 114.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_in" for 179.236.8.213 at 2017-01-13 04:45:48 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 179.236.8.213 at 2017-01-13 04:46:48 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 179.236.8.213 at 2017-01-13 04:46:51 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ufYVIR7n/v8OmOIOyEwrCNcgxckFNr15yZwxPHpJISPjes+Qk6IjgZzc/SAFhFu+esbmX5klINnsEFSxDblE0Q==", "user"=>{"email"=>"maria@maia", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "maria@maia"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2017-01-13 04:43:01.292187"], ["current_sign_in_at", "2017-01-13 04:46:51.728602"], ["sign_in_count", 14], ["updated_at", "2017-01-13 04:46:51.729784"], ["id", 4]]
+  [1m[36m (15.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 164ms (ActiveRecord: 16.3ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:46:51 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navbar_user.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 45ms (Views: 44.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 179.236.8.213 at 2017-01-13 04:49:44 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"d3TjdKZTriGOY1+LoCC/l+1FK3oR7O+HbZ7qPaAhaFrC7W7Fgnqz/pYGD2KVdWGLpmFcbLSxhs8cU5xVOg1F0Q=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 19ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:49:44 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 179.236.8.213 at 2017-01-13 04:49:50 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 179.236.8.213 at 2017-01-13 04:49:51 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oybUS75GzQJnk99pKsSDHS0JT3lqmWsx++7E7onQbsNchxZ4ZoU2Lm6K1nayud5EsYWHzQ0emZXccPj419WT5Q==", "user"=>{"email"=>"maria@maia", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "maria@maia"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2017-01-13 04:46:51.728602"], ["current_sign_in_at", "2017-01-13 04:49:51.620146"], ["sign_in_count", 15], ["updated_at", "2017-01-13 04:49:51.621491"], ["id", 4]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 159ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:49:51 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navbar_user.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 49ms (Views: 48.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/maria" for 179.236.8.213 at 2017-01-13 04:50:01 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"maria"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "maria"]]
+  Rendered utils/_redweet_form.html.erb (1.7ms)
+  [1m[35mRedweet Load (0.2ms)[0m  SELECT "redweets".* FROM "redweets"  ORDER BY "redweets"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (167.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_navbar_user.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (2.4ms)
+Completed 200 OK in 226ms (Views: 216.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/redweets" for 179.236.8.213 at 2017-01-13 04:50:06 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RedweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GovwUYxzgCkmVbyZU4B8kuDUPzNcVPujJswNgACXAiecFiSxrYOx56Z15eosBLHAe949aJWbsnT8N/zE3nl+IA==", "redweet"=>{"content"=>"oi"}, "commit"=>"Novo"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "redweets" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["content", "oi"], ["user_id", 4], ["created_at", "2017-01-13 04:50:06.877300"], ["updated_at", "2017-01-13 04:50:06.877300"]]
+  [1m[36m (71.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io
+Completed 302 Found in 79ms (ActiveRecord: 72.1ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:50:07 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 78ms (Views: 76.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/maria" for 179.236.8.213 at 2017-01-13 04:50:18 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"maria"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "maria"]]
+  Rendered utils/_redweet_form.html.erb (1.0ms)
+  [1m[35mRedweet Load (0.2ms)[0m  SELECT "redweets".* FROM "redweets"  ORDER BY "redweets"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_navbar_user.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 210ms (Views: 207.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:51:54 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 101ms (Views: 87.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:53:18 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:53:38 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (26.8ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `redirect_to' for #<#<Class:0x007efe7e92a8a0>:0x007efe7e1ee7a8>):
+    72:     
+    73:     
+    74: <% else %>
+    75:     <%=redirect_to '/explore'%>
+    76: <% end %>
+  app/views/pages/index.html.erb:75:in `_app_views_pages_index_html_erb__1854090001867956815_69815751371140'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.6ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:53:51 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (22.2ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `redirect_to' for #<#<Class:0x007efe7e92a8a0>:0x007efe7e4dde50>):
+    72:     
+    73:     
+    74: <% else %>
+    75:     <% redirect_to '/explore'%>
+    76: <% end %>
+  app/views/pages/index.html.erb:75:in `_app_views_pages_index_html_erb__1854090001867956815_69815752909160'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.4ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:55:51 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navbar_user.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 42ms (Views: 41.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:56:11 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 65ms (Views: 64.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/index" for 179.236.8.213 at 2017-01-13 04:56:21 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navbar_user.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 39ms (Views: 38.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/index" for 179.236.8.213 at 2017-01-13 04:56:25 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navbar_user.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 40ms (Views: 39.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/explore" for 179.236.8.213 at 2017-01-13 04:57:02 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#explore as HTML
+  [1m[35mRedweet Load (0.2ms)[0m  SELECT "redweets".* FROM "redweets"  ORDER BY "redweets"."created_at" DESC
+  Rendered pages/explore.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_navbar_user.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (2.3ms)
+Completed 200 OK in 61ms (Views: 57.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/index" for 179.236.8.213 at 2017-01-13 04:57:11 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navbar_user.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/index" for 179.236.8.213 at 2017-01-13 04:58:38 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navbar_user.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 72ms (Views: 71.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/maria" for 179.236.8.213 at 2017-01-13 04:59:08 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"maria"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "maria"]]
+  Rendered utils/_redweet_form.html.erb (8.4ms)
+  [1m[36mRedweet Load (0.2ms)[0m  [1mSELECT "redweets".* FROM "redweets"  ORDER BY "redweets"."created_at" DESC[0m
+  Rendered pages/profile.html.erb within layouts/application (10.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered layouts/_navbar_user.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 131ms (Views: 127.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:01:14 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navbar_user.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 64ms (Views: 63.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 179.236.8.213 at 2017-01-13 05:01:15 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mRedweet Load (0.3ms)[0m  SELECT "redweets".* FROM "redweets"  ORDER BY "redweets"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_navbar_user.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 179.236.8.213 at 2017-01-13 05:01:23 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Jrqq7F3JwnNAQSu6D6RaKduqMtZjTja2gaWMC3p2Ox2gJ34MfDnzvcBhcslwIJd7QKAwjaqBf2FbXn1PpJhHGg=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:01:23 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 179.236.8.213 at 2017-01-13 05:01:28 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 179.236.8.213 at 2017-01-13 05:01:31 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lIRym+tgDqn6UJuFvTkTcQfKcL4hhG6u75Gvg0+sfDl5+4w1G6P3ftLDHhKX6A7o7QslI23itU6TzbjcEYDoNA==", "user"=>{"email"=>"maria@maia", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "maria@maia"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2017-01-13 04:49:51.620146"], ["current_sign_in_at", "2017-01-13 05:01:31.867371"], ["sign_in_count", 16], ["updated_at", "2017-01-13 05:01:31.868382"], ["id", 4]]
+  [1m[35m (9.3ms)[0m  commit transaction
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 208ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:01:32 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar_user.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 46ms (Views: 45.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 179.236.8.213 at 2017-01-13 05:01:32 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mRedweet Load (0.2ms)[0m  SELECT "redweets".* FROM "redweets"  ORDER BY "redweets"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_navbar_user.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (2.5ms)
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 179.236.8.213 at 2017-01-13 05:01:47 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"upmCjxeYsJfBwZ2OVmSOlP3GdWJrObUuO7mmLK8bRQFriADJ/rSxftr3Sfx6OPprcjLMAWUdZHKT5Ab08eke1A=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  commit transaction
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:01:47 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:05:28 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (4.5ms)
+  Rendered devise/shared/_links.html.erb (5.9ms)
+  Rendered utils/_sign_up_form.html.erb (10.7ms)
+  Rendered pages/index.html.erb within layouts/application (17.5ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 58ms (Views: 57.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:06:02 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (5.7ms)
+  Rendered devise/shared/_links.html.erb (5.5ms)
+  Rendered utils/_sign_up_form.html.erb (9.7ms)
+  Rendered pages/index.html.erb within layouts/application (17.9ms)
+  Rendered layouts/_navbar_guest.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 114ms (Views: 112.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:06:23 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (4.3ms)
+  Rendered devise/shared/_links.html.erb (5.0ms)
+  Rendered utils/_sign_up_form.html.erb (7.6ms)
+  Rendered pages/index.html.erb within layouts/application (13.4ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 52ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:07:03 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (4.1ms)
+  Rendered devise/shared/_links.html.erb (5.3ms)
+  Rendered utils/_sign_up_form.html.erb (8.5ms)
+  Rendered pages/index.html.erb within layouts/application (14.6ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:08:47 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.8ms)
+  Rendered devise/shared/_links.html.erb (4.6ms)
+  Rendered utils/_sign_up_form.html.erb (7.4ms)
+  Rendered pages/index.html.erb within layouts/application (13.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:09:48 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (4.1ms)
+  Rendered devise/shared/_links.html.erb (5.1ms)
+  Rendered utils/_sign_up_form.html.erb (7.9ms)
+  Rendered pages/index.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 192ms (Views: 191.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:10:31 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (10.7ms)
+  Rendered devise/shared/_links.html.erb (4.5ms)
+  Rendered utils/_sign_up_form.html.erb (7.1ms)
+  Rendered pages/index.html.erb within layouts/application (19.7ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 59ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:10:54 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.8ms)
+  Rendered devise/shared/_links.html.erb (4.4ms)
+  Rendered utils/_sign_up_form.html.erb (7.1ms)
+  Rendered pages/index.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 52ms (Views: 51.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:11:24 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.8ms)
+  Rendered devise/shared/_links.html.erb (4.7ms)
+  Rendered utils/_sign_up_form.html.erb (7.6ms)
+  Rendered pages/index.html.erb within layouts/application (13.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 54ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:12:35 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.8ms)
+  Rendered devise/shared/_links.html.erb (4.7ms)
+  Rendered utils/_sign_up_form.html.erb (7.6ms)
+  Rendered pages/index.html.erb within layouts/application (13.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:13:09 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.8ms)
+  Rendered devise/shared/_links.html.erb (4.7ms)
+  Rendered utils/_sign_up_form.html.erb (7.6ms)
+  Rendered pages/index.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 165ms (Views: 164.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:13:53 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.8ms)
+  Rendered devise/shared/_links.html.erb (4.9ms)
+  Rendered utils/_sign_up_form.html.erb (7.6ms)
+  Rendered pages/index.html.erb within layouts/application (13.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.1ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 52ms (Views: 51.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 179.236.8.213 at 2017-01-13 05:14:22 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LsTSQHqdZuqnuuXfkxoT6LG0x1UqgwIjwdPLbN4QkS1hRoKVlxf5R5UV0w5brw5yW/fbSHfvL5fwIjxfzU4J3w==", "user"=>{"email"=>"maria@maia", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "maria@maia"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2017-01-13 05:01:31.867371"], ["current_sign_in_at", "2017-01-13 05:14:22.983869"], ["sign_in_count", 17], ["updated_at", "2017-01-13 05:14:22.985089"], ["id", 4]]
+  [1m[35m (9.3ms)[0m  commit transaction
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 248ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:14:23 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar_user.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for 179.236.8.213 at 2017-01-13 05:14:23 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mRedweet Load (0.3ms)[0m  SELECT "redweets".* FROM "redweets"  ORDER BY "redweets"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_navbar_user.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 179.236.8.213 at 2017-01-13 05:14:34 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Pp11wSho+HtlAW6e0EKb0CSZgUAQqx6eKGxynTaicN2HXaUC2tkIm9BFttsGXPqKLJ12wFLU9z44xFsBWChJug=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:14:35 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (4.1ms)
+  Rendered devise/shared/_links.html.erb (4.4ms)
+  Rendered utils/_sign_up_form.html.erb (7.5ms)
+  Rendered pages/index.html.erb within layouts/application (13.1ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 61ms (Views: 60.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:17:00 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (4.4ms)
+  Rendered devise/shared/_links.html.erb (5.0ms)
+  Rendered utils/_sign_up_form.html.erb (8.1ms)
+  Rendered pages/index.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.5ms)
+Completed 200 OK in 65ms (Views: 64.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:17:09 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (4.3ms)
+  Rendered devise/shared/_links.html.erb (4.4ms)
+  Rendered utils/_sign_up_form.html.erb (7.0ms)
+  Rendered pages/index.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 54ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:17:19 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (4.2ms)
+  Rendered devise/shared/_links.html.erb (4.2ms)
+  Rendered utils/_sign_up_form.html.erb (6.8ms)
+  Rendered pages/index.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 50ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:17:34 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (4.7ms)
+  Rendered devise/shared/_links.html.erb (4.7ms)
+  Rendered utils/_sign_up_form.html.erb (8.9ms)
+  Rendered pages/index.html.erb within layouts/application (15.1ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 63ms (Views: 62.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:17:47 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (4.4ms)
+  Rendered devise/shared/_links.html.erb (4.5ms)
+  Rendered utils/_sign_up_form.html.erb (7.3ms)
+  Rendered pages/index.html.erb within layouts/application (13.1ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 53ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:17:55 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (4.9ms)
+  Rendered devise/shared/_links.html.erb (4.5ms)
+  Rendered utils/_sign_up_form.html.erb (7.3ms)
+  Rendered pages/index.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 55ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:18:03 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (4.4ms)
+  Rendered devise/shared/_links.html.erb (4.5ms)
+  Rendered utils/_sign_up_form.html.erb (7.5ms)
+  Rendered pages/index.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 53ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:18:13 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (5.3ms)
+  Rendered devise/shared/_links.html.erb (4.8ms)
+  Rendered utils/_sign_up_form.html.erb (8.0ms)
+  Rendered pages/index.html.erb within layouts/application (15.4ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 68ms (Views: 67.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:18:22 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (4.2ms)
+  Rendered devise/shared/_links.html.erb (4.4ms)
+  Rendered utils/_sign_up_form.html.erb (7.2ms)
+  Rendered pages/index.html.erb within layouts/application (12.8ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 50ms (Views: 49.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:18:37 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (5.3ms)
+  Rendered devise/shared/_links.html.erb (6.4ms)
+  Rendered utils/_sign_up_form.html.erb (9.5ms)
+  Rendered pages/index.html.erb within layouts/application (17.1ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 138ms (Views: 136.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:19:22 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (4.6ms)
+  Rendered devise/shared/_links.html.erb (4.6ms)
+  Rendered utils/_sign_up_form.html.erb (7.4ms)
+  Rendered pages/index.html.erb within layouts/application (13.6ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 61ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:20:10 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (5.8ms)
+  Rendered devise/shared/_links.html.erb (5.7ms)
+  Rendered utils/_sign_up_form.html.erb (9.2ms)
+  Rendered pages/index.html.erb within layouts/application (16.8ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 74ms (Views: 72.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:20:29 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (4.5ms)
+  Rendered devise/shared/_links.html.erb (4.4ms)
+  Rendered utils/_sign_up_form.html.erb (7.1ms)
+  Rendered pages/index.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 77ms (Views: 76.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:21:23 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (4.5ms)
+  Rendered devise/shared/_links.html.erb (4.7ms)
+  Rendered utils/_sign_up_form.html.erb (7.5ms)
+  Rendered pages/index.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_navbar_guest.html.erb (0.1ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 53ms (Views: 52.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:21:44 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (4.4ms)
+  Rendered devise/shared/_links.html.erb (4.5ms)
+  Rendered utils/_sign_up_form.html.erb (7.4ms)
+  Rendered pages/index.html.erb within layouts/application (13.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 53ms (Views: 52.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:22:03 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (4.5ms)
+  Rendered devise/shared/_links.html.erb (4.7ms)
+  Rendered utils/_sign_up_form.html.erb (7.6ms)
+  Rendered pages/index.html.erb within layouts/application (13.7ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 63ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:22:30 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (11.5ms)
+  Rendered devise/shared/_links.html.erb (4.7ms)
+  Rendered utils/_sign_up_form.html.erb (7.6ms)
+  Rendered pages/index.html.erb within layouts/application (20.8ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 137ms (Views: 136.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:22:56 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (4.4ms)
+  Rendered devise/shared/_links.html.erb (4.8ms)
+  Rendered utils/_sign_up_form.html.erb (7.4ms)
+  Rendered pages/index.html.erb within layouts/application (13.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.1ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 51ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:23:28 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.6ms)
+  Rendered devise/shared/_links.html.erb (4.2ms)
+  Rendered utils/_sign_up_form.html.erb (6.9ms)
+  Rendered pages/index.html.erb within layouts/application (159.1ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 198ms (Views: 197.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 179.236.8.213 at 2017-01-13 05:23:32 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nIMnL/1L2py6lcqaT2FpEw5rwLS0WYRwBzfFwEsH0oN3q6+L7IJ6vCaO6OWHW7jMUSFxXf7+pj4UkS7WDSqmSA==", "user"=>{"email"=>"maria@maia", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "maria@maia"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2017-01-13 05:14:22.983869"], ["current_sign_in_at", "2017-01-13 05:23:33.072316"], ["sign_in_count", 18], ["updated_at", "2017-01-13 05:23:33.073561"], ["id", 4]]
+  [1m[35m (14.6ms)[0m  commit transaction
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 161ms (ActiveRecord: 15.2ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:23:33 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 179.236.8.213 at 2017-01-13 05:23:33 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mRedweet Load (0.2ms)[0m  SELECT "redweets".* FROM "redweets"  ORDER BY "redweets"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_navbar_user.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 179.236.8.213 at 2017-01-13 05:23:36 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LHL3KRZ4GJbGLsMy7HsK8WHWrAtahqqLpA5cjve2Y64hYzhfPEf1F9SOGPquRH4WgLMTiHed3VVBzdOGWLxfWQ=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:23:37 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.6ms)
+  Rendered devise/shared/_links.html.erb (4.7ms)
+  Rendered utils/_sign_up_form.html.erb (7.4ms)
+  Rendered pages/index.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:23:58 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (4.9ms)
+  Rendered devise/shared/_links.html.erb (5.0ms)
+  Rendered utils/_sign_up_form.html.erb (9.3ms)
+  Rendered pages/index.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 62ms (Views: 61.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:26:27 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (4.2ms)
+  Rendered devise/shared/_links.html.erb (4.5ms)
+  Rendered utils/_sign_up_form.html.erb (7.2ms)
+  Rendered pages/index.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 127ms (Views: 126.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:26:54 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (4.0ms)
+  Rendered devise/shared/_links.html.erb (4.6ms)
+  Rendered utils/_sign_up_form.html.erb (8.6ms)
+  Rendered pages/index.html.erb within layouts/application (14.2ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 62ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:27:24 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.1ms)
+  Rendered devise/shared/_links.html.erb (4.3ms)
+  Rendered utils/_sign_up_form.html.erb (7.0ms)
+  Rendered pages/index.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 50ms (Views: 49.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:27:44 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.3ms)
+  Rendered devise/shared/_links.html.erb (5.5ms)
+  Rendered utils/_sign_up_form.html.erb (9.1ms)
+  Rendered pages/index.html.erb within layouts/application (14.6ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 54ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:27:54 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.1ms)
+  Rendered devise/shared/_links.html.erb (4.6ms)
+  Rendered utils/_sign_up_form.html.erb (7.3ms)
+  Rendered pages/index.html.erb within layouts/application (12.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 50ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:28:06 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.5ms)
+  Rendered devise/shared/_links.html.erb (4.5ms)
+  Rendered utils/_sign_up_form.html.erb (7.9ms)
+  Rendered pages/index.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 62ms (Views: 61.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:28:14 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.4ms)
+  Rendered devise/shared/_links.html.erb (4.3ms)
+  Rendered utils/_sign_up_form.html.erb (7.3ms)
+  Rendered pages/index.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 50ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:28:32 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.0ms)
+  Rendered devise/shared/_links.html.erb (4.7ms)
+  Rendered utils/_sign_up_form.html.erb (7.6ms)
+  Rendered pages/index.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 51ms (Views: 50.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:29:56 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.6ms)
+  Rendered devise/shared/_links.html.erb (5.1ms)
+  Rendered utils/_sign_up_form.html.erb (7.9ms)
+  Rendered pages/index.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 1651ms (Views: 1650.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-fe83f0f1881d171b74945c608bc379984e416cb526285d14e2826f643ef3b46a.css?body=1" for 179.236.8.213 at 2017-01-13 05:29:58 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:30:49 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.8ms)
+  Rendered devise/shared/_links.html.erb (5.2ms)
+  Rendered utils/_sign_up_form.html.erb (8.6ms)
+  Rendered pages/index.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 77ms (Views: 76.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:31:04 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.3ms)
+  Rendered devise/shared/_links.html.erb (5.7ms)
+  Rendered utils/_sign_up_form.html.erb (9.0ms)
+  Rendered pages/index.html.erb within layouts/application (14.4ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 62ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:32:46 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.3ms)
+  Rendered utils/_sign_up_form.html.erb (2.9ms)
+  Rendered pages/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:34:01 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.5ms)
+  Rendered utils/_sign_up_form.html.erb (3.4ms)
+  Rendered pages/index.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.5ms)
+Completed 200 OK in 63ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:34:27 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.5ms)
+  Rendered utils/_sign_up_form.html.erb (3.1ms)
+  Rendered pages/index.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 53ms (Views: 52.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:34:55 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.5ms)
+  Rendered utils/_sign_up_form.html.erb (3.4ms)
+  Rendered pages/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:36:15 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.6ms)
+  Rendered utils/_sign_up_form.html.erb (3.0ms)
+  Rendered pages/index.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 53ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:36:31 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.6ms)
+  Rendered utils/_sign_up_form.html.erb (2.3ms)
+  Rendered pages/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.6ms)
+Completed 200 OK in 64ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:36:39 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.3ms)
+  Rendered utils/_sign_up_form.html.erb (2.4ms)
+  Rendered pages/index.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 52ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:37:18 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.9ms)
+  Rendered utils/_sign_up_form.html.erb (3.3ms)
+  Rendered pages/index.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 53ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 179.236.8.213 at 2017-01-13 05:37:23 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:37:50 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.8ms)
+  Rendered utils/_sign_up_form.html.erb (3.2ms)
+  Rendered pages/index.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 54ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 05:38:01 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered utils/_sign_in_form.html.erb (3.5ms)
+  Rendered utils/_sign_up_form.html.erb (3.1ms)
+  Rendered pages/index.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 50ms (Views: 49.9ms | ActiveRecord: 0.0ms)
