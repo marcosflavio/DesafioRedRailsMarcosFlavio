@@ -5,10 +5,19 @@ class PagesController < ApplicationController
   def index
   end
 
+
   #Action para pages/home
   def home
-    @redweets = Redweet.all
+    following = Array.new
+    for @f in current_user.following do
+      following.push(@f.id)
+    end
+    
+    @u = current_user
+  
     @newRedweet = Redweet.new
+    @redweets = Redweet.where("user_id IN (?) OR user_id = ? ", following, @u.id)
+  
   end
   
   #Action para pages/profile
@@ -23,12 +32,12 @@ class PagesController < ApplicationController
     end
     
     #disponibilizando somente os posts do proprio usuario
-    #@posts = Redweet.all.where("user_id = ?", User.find_by_username(params[:id]).id)
-    @redweets = Redweet.all
-    
+    @redweets = Redweet.where("user_id = ?", User.find_by_username(params[:id]).id)
+        
     #variavel para criar um novo redweet 
     @newRedweet = Redweet.new
-     @quemSeguir = User.all.last(7)
+    @quemSeguir = User.all.last(7)
+  
   end
   
   #Action para pages/explore
