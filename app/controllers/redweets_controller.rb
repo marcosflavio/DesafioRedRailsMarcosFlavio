@@ -9,9 +9,9 @@ class RedweetsController < ApplicationController
      @redweet.user_id = current_user.id #o redweet recebe o id do usuario que o fez
     respond_to do |f|
         if(@redweet.save)
-            f.html{redirect_to "", notice: "Redweet criado com sucesso!"}
+            f.html{redirect_to ""}
         else
-            f.html{redirect_to "", notice: "Erro ao Redweetar!"}            
+            f.html{redirect_to ""}            
         end
     end
    end

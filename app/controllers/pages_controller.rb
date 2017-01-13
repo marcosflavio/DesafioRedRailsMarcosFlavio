@@ -8,6 +8,7 @@ class PagesController < ApplicationController
   #Action para pages/home
   def home
     @redweets = Redweet.all
+    @newRedweet = Redweet.new
   end
   
   #Action para pages/profile
