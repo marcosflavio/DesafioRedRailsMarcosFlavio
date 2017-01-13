@@ -2,15 +2,34 @@
 <div class="row">
     
     <div class="col-xs-3">
-        <div class="panel panel-default">
-          <div class="panel-body">
-             <p>Stats</p>
+        <div class="panel panel-default panel-dark">
+          <div class="panel-image hide-panel-body ">  
+            <img src="/logo.png" class="panel-image-preview">
+          </div>
+          <div class="panel-footer">
+            <div class="row">
+                <div class="col-sm-2"><img src="/egg.jpg" height="50px" width="50px" class="rounded-img home-avatar"></div>
+                <div class="col-sm-10"><h4 style="text-align: center;"> <a href="/user/<%= current_user.username %> "> <%= current_user.username %> </a></h4></div>
+                <div class="col-sm-12" style="margin-top: 10px;">
+                </div>
+            </div>
+
           </div>
         </div>
         
-        <div class="panel panel-default">
+         <div class="panel panel-default">
           <div class="panel-body">
-             <p>Trends</p>
+             <h5 style="color: grey; font-size: 125%;">Assuntos do momento</h5>
+              <a href="">#NaoAOLimiteDeInternet</a><br>
+                <span style="color: grey;">40k Redweets</span><br><br>
+              <a href="">#DesventurasEmSerie</a><br>
+                <span style="color: grey;">13k Redweets</span><br><br>
+              <a href="">#SeEuFosseDonoDoRedwitter</a><br>
+                <span style="color: grey;">12k Posts</span><br><br>
+              <a href="">#NaSextaFeira13Eu</a><br>
+                <span style="color: grey;">5k Posts</span><br><br>
+              <a href="">#RedRocketTeam</a><br>
+                <span style="color: grey;">7k Posts</span><br><br>
           </div>
         </div>
         
@@ -57,10 +76,10 @@
          
         </div>
     
-    <div class="col-xs-3">
+        <div class="col-xs-3">
         <div class="panel panel-default">
           <div class="panel-body">
-             <p>Sobre</p>
+            <p style="opacity: 0.5; font-size: 90%;">© 2017 Redwitter  Sobre  Ajuda  Termos  Privacidade  Trabalhe conosco Blog Moble  Desenvolvedores</p>
           </div>
         </div>
     </div>
