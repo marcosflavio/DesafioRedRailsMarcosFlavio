@@ -1,0 +1,26 @@
+<% if user_signed_in? %>
+    <% if current_user.id != user.id %>   
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <center>
+                    <% if !current_user.following?(user) %>
+                        <%= form_for(current_user.active_relationships.build) do |f| %>
+                            <div><%= hidden_field_tag :followed_id, user.id %></div>
+                            <%= f.submit "Seguir", class: "btn btn-primary" %>
+                        <% end %>
+                    <% else %>
+                        <%= form_for(current_user.active_relationships.find_by(followed_id: user.id),
+                            html: { method: :delete }) do |f| %>
+                            <%= f.submit "Deixar de seguir", class: "btn btn-danger" %>
+                        <% end %>
+                    <% end %>
+                </center>
+            </div>
+        </div>
+    
+<% end %>
+
+<% else #Usuário sem conta, ou seja, convidado, logo não aparece o botão de seguir %>
+       
+<% end %>

@@ -14,7 +14,6 @@
     </div>
     
     <div class="col-xs-6">
-        
         <%= render '/utils/redweet_form' %><br/><br/><br/>    
         <%for @redweet in @redweets %>
         <div class="panel panel-default post-panel">
@@ -52,12 +51,11 @@
          
         </div>
     
-       
-    
     <div class="col-xs-3">
+        <%= render '/utils/follow_button', :user => User.find_by_username(params[:id]) %>
         <div class="panel panel-default">
           <div class="panel-body">
-             <h5 style="color: grey; font-size: 125%;">Sugestões</h5>
+             <h5 style="color: grey; font-size: 125%;">Quem Seguir</h5>
              <% for @user in @quemSeguir do %>
                <p style="font-weight: bold; opacity: 0.85;" ><a href="/user/<%= @user.username %>"><%= @user.username %></a></p>
              <% end %>
