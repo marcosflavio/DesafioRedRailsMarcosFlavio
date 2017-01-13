@@ -8091,3 +8091,301 @@ Processing by Devise::SessionsController#new as HTML
   Rendered layouts/_navbar_guest.html.erb (0.2ms)
   Rendered layouts/_navbar.html.erb (1.0ms)
 Completed 200 OK in 49ms (Views: 47.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 179.236.8.213 at 2017-01-13 04:25:08 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (3.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 179.236.8.213 at 2017-01-13 04:25:10 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yGun4rvF62t5d8kuVAlNJpsGC8OuKjV3zuReTlU5qaRj3qw/TAZZDEW4YnP/rGpciegN9I8Ox/oCVBcJ3aG8aQ==", "user"=>{"email"=>"maria@maia", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "maria@maia"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2017-01-13 04:20:31.807884"], ["current_sign_in_at", "2017-01-13 04:25:10.677164"], ["sign_in_count", 7], ["updated_at", "2017-01-13 04:25:10.678312"], ["id", 4]]
+  [1m[35m (9.2ms)[0m  commit transaction
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 158ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:25:11 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navbar_user.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 41ms (Views: 40.7ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/users/sign_out" for 179.236.8.213 at 2017-01-13 04:25:14 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gydNK7qGPWPM7Ev/G1VjyWavL1O//IIbEE7pQnEgjr8xvWhc4V9+pWeCIQgoVzdRncUDFMAKJ51VkxlRVaCuMQ=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:25:14 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 40ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:31:04 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 76ms (Views: 71.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 179.236.8.213 at 2017-01-13 04:31:07 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (3.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.9ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 69ms (Views: 59.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/sign_in" for 179.236.8.213 at 2017-01-13 04:31:08 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cMGc/lPtto9QInodtYVYss7CeZXgW3oBrHJP+jPuYc3EP35Oro3ktIRn+cASsSFkb3Wz9dvqjB/9VhvEKOZ8WQ==", "user"=>{"email"=>"maria@maia", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "maria@maia"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2017-01-13 04:25:10.677164"], ["current_sign_in_at", "2017-01-13 04:31:08.885002"], ["sign_in_count", 8], ["updated_at", "2017-01-13 04:31:08.886289"], ["id", 4]]
+  [1m[35m (7.3ms)[0m  commit transaction
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 156ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:31:09 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navbar_user.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 43ms (Views: 42.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 179.236.8.213 at 2017-01-13 04:31:11 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uLDohodK5TwJ3m6VipxLQ4nW0HSOzA0os4LIhivrnvest1rh1tGeQwNaxHFq3eS4RtiSV2YR8v4E9CKa0QzbVg=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:31:11 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 36ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:31:36 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 40ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 179.236.8.213 at 2017-01-13 04:31:38 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 102ms (Views: 93.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/sign_in" for 179.236.8.213 at 2017-01-13 04:31:40 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iW6Q/K+W1l+SyBu0YOYE0IpQNiSC6aA/u1dO9rgpqiZjOWTE5lCl1RjoGxsQuOJ1Xs+P1tBo+bpig7pm3zY0IA==", "user"=>{"email"=>"maria@maia", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "maria@maia"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2017-01-13 04:31:08.885002"], ["current_sign_in_at", "2017-01-13 04:31:40.737524"], ["sign_in_count", 9], ["updated_at", "2017-01-13 04:31:40.738618"], ["id", 4]]
+  [1m[35m (8.9ms)[0m  commit transaction
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 164ms (ActiveRecord: 9.6ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:31:41 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navbar_user.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 48ms (Views: 47.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 179.236.8.213 at 2017-01-13 04:31:59 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"T/+mHCWZbtN2F0ppWwkFQHtMFxApBevOhSicef0vo1DHt0wnJjqdIv3Iwuos6OyUPVYKbTB6fMvrBc3L+sSB3A=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 15ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:31:59 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.8ms)
+Completed 200 OK in 71ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:32:30 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+Completed 200 OK in 50ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 179.236.8.213 at 2017-01-13 04:32:32 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (3.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.8ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 66ms (Views: 56.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/sign_in" for 179.236.8.213 at 2017-01-13 04:32:33 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7B4UfTPATs4Z3nDnJt/yj46/J4RX3JMYoJp9xW6zyEjaa+VRFzGHbigK7aLnh8gt6vFQfmxyliBvH8DsrmHKJA==", "user"=>{"email"=>"maria@maia", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "maria@maia"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2017-01-13 04:31:40.737524"], ["current_sign_in_at", "2017-01-13 04:32:33.758919"], ["sign_in_count", 10], ["updated_at", "2017-01-13 04:32:33.760218"], ["id", 4]]
+  [1m[35m (9.0ms)[0m  commit transaction
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 194ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:32:34 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 179.236.8.213 at 2017-01-13 04:32:42 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mRedweet Load (0.3ms)[0m  SELECT "redweets".* FROM "redweets"  ORDER BY "redweets"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.5ms)
+Completed 200 OK in 170ms (Views: 166.3ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 179.236.8.213 at 2017-01-13 04:39:03 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0PJxJgiMIFhnOGvxQf4jxjedwFLHIDCVMOdokeHvGTUJQ7cUvZ8/c2jB/GczJ3r+EPd0zjC3+beRvAu/Lk52ew=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 18ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:39:04 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 179.236.8.213 at 2017-01-13 04:39:11 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (3.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 50ms (Views: 48.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 179.236.8.213 at 2017-01-13 04:39:12 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zW2VAN0cYv8zKfOnw/BLjQudF6bAWpGu8BIkjI5U5SzEfOEiyQB44GRY1+7zZTKyxh+MXiWI0Rnc4dtJfPa0fQ==", "user"=>{"email"=>"maria@maia", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "maria@maia"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2017-01-13 04:32:33.758919"], ["current_sign_in_at", "2017-01-13 04:39:12.854985"], ["sign_in_count", 11], ["updated_at", "2017-01-13 04:39:12.856147"], ["id", 4]]
+  [1m[35m (9.4ms)[0m  commit transaction
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 153ms (ActiveRecord: 10.2ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:39:13 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered pages/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navbar_user.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 40ms (Views: 39.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for 179.236.8.213 at 2017-01-13 04:39:19 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xcMpXWtEChivvKnTS0EjPHxemUsxpBVbhz/xD9PLanc51XdvqulIGpRCoo8QKUs/Cc+yPf1N/LI9jvgFmsZ++Q=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to https://desafioredrailsmarcosflavio-marcosflavio.c9users.io/
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 179.236.8.213 at 2017-01-13 04:39:19 +0000
+Cannot render console from 179.236.8.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.0ms)
