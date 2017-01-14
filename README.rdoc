@@ -8,11 +8,11 @@ A aplicação é o Redwitter, que é basicamente uma cópia do Twitter
 
 A aplicação foi desenvolvida em Ruby utilizando o Framework Rails
 
-Versão do Ruby  : ruby 2.3.0p0 (2015-12-25 revision 53290) 
+Versão do Ruby  : ruby 2.3.0p0 (2015-12-25 revision 53290)
+
 Versão do Rails : Rails 4.2.5
 
 Ao decorrer do desenvolvimento, este documento será modificado com as atualizações!
-
 
 
 att,
@@ -28,16 +28,29 @@ templates necessários para o desenvolvimento do Redwitter
 O bootstrap utilizado para "copiar" o twitter foi retirado de https://github.com/twbs/bootstrap-sass
 Container utilizado foi retirado de http://getbootstrap.com/css/#grid
 Painels utilizados foram retirados de http://getbootstrap.com/components/#panels
-Foi utilizada também a classe Jumbotron para o painel header, retirado de http://getbootstrap.com/components/#jumbotron
-
 Icones retirados de: http://getbootstrap.com/components/#glyphicons
+
 == 2.0 Autorização
 
 Para o uso de autenticação na aplicação foi utilizado o Devise, que é uma solução flexível para autenticação de aplicações
 desenvolvidas em Rails. Foi obtido a partir do repositório: https://github.com/plataformatec/devise onde contém mais
 informações e um tutorial de como utilizala.
 
+== 3.0 Upload de Imagens
 
-== 3.0 Models
+Para a função de uploade de imagens, foi utilizada a biblioteca PaperClip
+Mais informações em: https://github.com/thoughtbot/paperclip
+O Image Processor utilizado foi o ImageMagick (http://www.imagemagick.org/script/index.php), o mesmo
+deve ser instalado na máquina servidora via terminal ou prompt para que o mesmo seja capaz de processar
+as imagens.
+Para mais informações sobre a instação do ImageMagick acesse: https://github.com/thoughtbot/paperclip e 
+das configurações do PaperClip.
 
-    
+== 4.0 Funções desenvolvidas até o presente momento
+    *Usuários podem criar conta, editar, deletar dentre outras funções específicas.
+    *Usuários pode criar Redweets.
+    *Usuários pode alterar sua imagem de perfil e seu status.
+    *Usuários podem seguir uns aos outros.
+    *Usuários podem verificar todos os redweets do momento.
+    *Entre outras funcionalidades desenvolvidas e que ainda serão desenvolvidas.
+
