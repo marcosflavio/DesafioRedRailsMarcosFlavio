@@ -2,35 +2,33 @@
   <h2>Participe hoje do Redwitter.</h2> <br/>
   
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  
     <form>
       <%= devise_error_messages! %>
-  
-       <div class="form-group">
+      <div class="form-group">
         <%= f.text_field :username, placeholder: 'Username', autofocus: true, :class => "form-control", :style => "height:45px;" %>
       </div>
-  
+      
       <div class="form-group">
         <%= f.email_field :email, placeholder: 'E-mail', autofocus: true, :class => "form-control" , :style => "height:45px;" %>
       </div>
-
+      
       <div class="form-group">
         <% if @minimum_password_length %>
         <% end %>
         <%= f.password_field :password, placeholder: 'Senha', autocomplete: "off" , :class => "form-control", :style => "height:45px;" %>
         <em>(A senha deve possuir no mínimo <%= @minimum_password_length %> caracteres)</em>
       </div>
-
+      
       <div class="form-group">
         <%= f.password_field :password_confirmation, placeholder: 'Confirme a senha', autocomplete: "off" , :class => "form-control" , :style => "height:45px;"%><br/>
       </div>
-    
+      
       <div class="actions">
        <%= f.submit "Inscreva-se", :class => "btn btn-primary col-sm-12", :style => "height:45px;" %>
       </div>
-  
     </form><br/>
   
   <% end %>
-  
   <%= render "devise/shared/links" %>
 </div>

@@ -38,6 +38,7 @@
             <div class="col-sm-1">
               <img src="/egg1.jpg" class="rounded-img" height="50px" width="50px"></img>
             </div>
+            
             <div class="col-sm-11">
               <p class="post-title"><span class="post-owner"><a href="/user/<%= User.find(@redweet.user_id).username %>"><%= User.find(@redweet.user_id).username %></a></span> <span class="post-creation">- <%= @redweet.created_at.to_formatted_s(:short) %></span></p>
               <p class="post-content"><%= @redweet.content %></p>
@@ -65,7 +66,9 @@
             </div>
           </div>
         </div>
+        
     </div>
+    
     <div class="col-xs-3">
         <div class="panel panel-default">
           <div class="panel-body">
@@ -81,7 +84,6 @@
             <p style="opacity: 0.5; font-size: 90%;">© 2017 Redwitter  Sobre  Ajuda  Termos  Política/Privacidade  Status  Mobile  Trabalhe Conosco Desenvolvedores</p>
           </div>
         </div>
-        
         
     </div>
 </div>

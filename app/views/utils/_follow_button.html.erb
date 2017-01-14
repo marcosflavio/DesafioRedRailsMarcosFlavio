@@ -1,6 +1,5 @@
 <% if user_signed_in? %>
     <% if current_user.id != user.id %>   
-
         <div class="panel panel-default">
             <div class="panel-body">
                 <center>
@@ -18,9 +17,6 @@
                 </center>
             </div>
         </div>
-    
 <% end %>
-
-<% else #Usuário sem conta, ou seja, convidado, logo não aparece o botão de seguir %>
-       
+<% else %>
 <% end %>

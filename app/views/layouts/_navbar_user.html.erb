@@ -1,6 +1,6 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid container">
-    <!-- Brand and toggle get grouped for better mobile display -->
+
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -12,22 +12,13 @@
     
     <img class="navbar-brand" src="/redlogo.png" alt="Foguetinho (Logo da RedRocket)">
     
-    
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="/home">Início</a></li>
         <li><a href="/moments">Moments</a></li>
-        <li><a href="/home">Notificações</a></li>
-        <li><a href="/home">Mensagens</a></li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
-        
-        <li type="button" class="btn btn-primary navbar-btn">Redweetar</li>
-        
         <li class="dropdown">
-          
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="/redlogo.png" class="rounded-img" height="25px" width="25px" alt="Foguetinho (Logo da RedRocket)"> <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="/user/<%= current_user.username %> ">Perfil</a></li>
@@ -37,13 +28,12 @@
           </ul>
         </li>
       </ul>
-      
       <form class="navbar-form navbar-right">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Procurar">
         </div>
       </form>
-      
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+
+  </div>
 </nav>

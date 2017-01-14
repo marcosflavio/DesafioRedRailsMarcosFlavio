@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
-  
-  
+  # Aqui são definidas todas as rotas para as Paginas contidas em view/pages
   devise_for :users
-  
-  # Aqui são definidas todas as rotas para as Páginas contidas em view/pages
   
   #Rota para a action index no controller/pages_controller
   get '/index' =>  'pages#index'
@@ -17,13 +14,10 @@ Rails.application.routes.draw do
   #Rota para a action explore no controller/pages_controller
   get '/moments' =>  'pages#moments'
   
-  #Declarando a página principal da aplicação
+  #pagina principal da aplicação
   root 'pages#index'
   
-  
-  #Desclaracao para utilizar 
   resources :redweets
-  
   
   resources :users do
     member do
@@ -32,6 +26,8 @@ Rails.application.routes.draw do
   end
   
   resources :relationships, only: [:create, :destroy]
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

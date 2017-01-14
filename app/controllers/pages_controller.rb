@@ -1,4 +1,4 @@
-#Este controller possui as actions necessarias para todas as páginas contidas em views/pages/..
+#Este controller possui as actions necessarias para todas as páginas contidas em views/pages/
 class PagesController < ApplicationController
   
   #Action para pages/index
@@ -14,30 +14,27 @@ class PagesController < ApplicationController
     end
     
     @u = current_user
-  
     @newRedweet = Redweet.new
+    #variavel redweets que contem todos os redweets que foram feitos pelo usuario
+    #ou por algum usuario que o mesmo segue
     @redweets = Redweet.where("user_id IN (?) OR user_id = ? ", following, @u.id)
-  
   end
   
   #Action para pages/profile
   def profile
-    
     #capturar o username a partir da Url com id
     if( User.find_by_username(params[:id]))
-    @username = params[:id]
+      @username = params[:id]
     else
-      #senao possuir este usuario, redireciona para o 404
+      #senao possuir este usuario, redireciona com o alerta
       redirect_to root_path, :notice=> "User not found!"
     end
     
-    #disponibilizando somente os posts do proprio usuario
+    #disponibilizando somente os redweets do proprio usuario
     @redweets = Redweet.where("user_id = ?", User.find_by_username(params[:id]).id)
         
-    #variavel para criar um novo redweet 
     @newRedweet = Redweet.new
-    @quemSeguir = User.all.last(7)
-  
+    @quemSeguir = User.all.last(7) #os ultimos sete usuarios serão os recomendados para a sugestao de seguir
   end
   
   #Action para pages/explore
@@ -45,7 +42,6 @@ class PagesController < ApplicationController
     @newRedweet = Redweet.new
     @redweets = Redweet.all
     @quemSeguir = User.all.last(7)
-    
   end
   
 end

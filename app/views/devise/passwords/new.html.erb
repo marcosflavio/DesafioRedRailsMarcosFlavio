@@ -2,7 +2,7 @@
   <h2>Esqueceu sua senha?</h2>
 
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+    <%= devise_error_messages! %>
     <form>
       <div class="form-group">
         <%= f.email_field :email, autofocus: true , placeholder: 'E-mail',:class => "form-control" , :style => "height:45px;" %>
@@ -13,6 +13,5 @@
       </div>
     </form><br/>
   <% end %>
-
- Já possui uma conta? <%= link_to "Entrar", new_session_path(resource_name) %>
+Já possui uma conta? <%= link_to "Entrar", new_session_path(resource_name) %>
 </div>

@@ -1,8 +1,7 @@
 class RelationshipsController < ApplicationController
     
     def create
-        
-        #encontro o usuario do perfil
+        #encontro o usuario do perfil a ser seguido
         user = User.find(params[:followed_id])
         
         #meu usuario atual agora segue este outro usuario
@@ -13,7 +12,6 @@ class RelationshipsController < ApplicationController
     end
     
     def destroy
-        
         #encontro qual o usuario que estou deixando de seguir
         user = Relationship.find(params[:id]).followed 
         

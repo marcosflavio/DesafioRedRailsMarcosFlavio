@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+  
   #chamando o método de segurança antes que o devise_controller seja chamado
   before_action :configurar_parametros_de_seguranca, if: :devise_controller?
   
