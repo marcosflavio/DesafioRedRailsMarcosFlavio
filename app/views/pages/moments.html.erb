@@ -36,7 +36,11 @@
           <div class="panel-body row">
             
             <div class="col-sm-1">
-              <img src= "<%= User.find(@redweet.user_id).image.url(:medium) %>" class="rounded-img home-avatar" height="50px" width="50px"></img>
+               <% if User.find(@redweet.user_id).image_file_size != nil%>
+                  <img src= "<%= User.find(@redweet.user_id).image.url(:medium) %>" class="rounded-img home-avatar" height="50px" width="50px"></img>
+               <% else %>
+                  <img src="/egg1.jpg" class="rounded-img" height="50px" width="50px"></img>
+               <% end %>
             </div>
             
             <div class="col-sm-11">
