@@ -6,6 +6,8 @@ gem 'devise'
 #Importando os componentes do bootstrap 
 gem 'bootstrap-sass', '~> 3.3.6'
 
+#Importando paperclip
+gem "paperclip", "~> 5.0.0"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record

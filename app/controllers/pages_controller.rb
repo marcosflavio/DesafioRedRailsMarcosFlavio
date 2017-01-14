@@ -25,6 +25,7 @@ class PagesController < ApplicationController
     #capturar o username a partir da Url com id
     if( User.find_by_username(params[:id]))
       @username = params[:id]
+      @u= User.find_by_username(params[:id])
     else
       #senao possuir este usuario, redireciona com o alerta
       redirect_to root_path, :notice=> "User not found!"
@@ -39,6 +40,7 @@ class PagesController < ApplicationController
   
   #Action para pages/explore
   def moments
+    @u = current_user
     @newRedweet = Redweet.new
     @redweets = Redweet.all
     @quemSeguir = User.all.last(7)

@@ -2,7 +2,7 @@
   <div class="panel panel-default post-form-panel">
     <div class="panel-body row">
       <div class="col-sm-1">
-        <img src="/egg1.jpg" class="rounded-img" height="35px" width="35px"></img>
+        <img src= "<%=@u.image.url(:medium) %>" class="rounded-img" height="35px" width="35px"></img>
       </div>
       <div class="col-sm-11">
         <%= form_for(@newRedweet) do |f| %>

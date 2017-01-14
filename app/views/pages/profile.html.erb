@@ -2,7 +2,7 @@
 <div class="row">
    <div class="col-xs-3">
       <div class="col-sm-12" style="margin-top: -150px;">
-         <img src="/egg1.jpg" height="200px" width="200px" class="rounded-img">
+         <img src="<%=@u.image.url(:medium) %>" height="200px" width="200px" class="rounded-img">
       </div>
       <div class="col-sm-12">
          <h3 style="font-weight: bold;"><%= params[:id] %></h3>
@@ -23,7 +23,7 @@
       <div class="panel panel-default post-panel">
          <div class="panel-body row">
             <div class="col-sm-1">
-               <img src="/egg1.jpg" class="rounded-img" height="50px" width="50px"></img>
+               <img src= "<%=@u.image.url(:medium) %>" class="rounded-img" height="50px" width="50px"></img>
             </div>
             <div class="col-sm-11">
                <p class="post-title"><span class="post-owner"><a href="/user/<%= User.find(@redweet.user_id).username %>"><%= User.find(@redweet.user_id).username %></a></span> <span class="post-creation">- <%= @redweet.created_at.to_formatted_s(:short) %></span></p>

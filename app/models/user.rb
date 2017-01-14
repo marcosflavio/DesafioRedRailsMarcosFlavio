@@ -14,6 +14,8 @@ class User < ActiveRecord::Base
   has_many :following, through: :active_relationships, source: :followed
          
   has_many :followers, through: :passive_relationships, source: :follower
+  has_attached_file :image, styles: {large:"600x600>",medium: "300x300>",thumb: "150x150#", min:"50x50>" }
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
   
   #metodo para seguir
   def follow(user)
