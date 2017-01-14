@@ -11,7 +11,11 @@
       <div class="col-sm-12">
          <h3 style="font-weight: bold;"><%= params[:id] %></h3>
          <p>
-            Desafio RedRocket!
+            <% if @u.status != nil %>
+               <%= @u.status %>
+            <% else %>
+               Usuário sem status.              
+            <% end %>
          </p>
       </div>
    </div>

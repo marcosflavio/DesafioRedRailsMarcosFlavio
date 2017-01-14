@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170114041810) do
+ActiveRecord::Schema.define(version: 20170114144200) do
 
   create_table "redweets", force: :cascade do |t|
     t.text     "content"
@@ -51,10 +51,12 @@ ActiveRecord::Schema.define(version: 20170114041810) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "status"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["status"], name: "index_users_on_status"
   add_index "users", ["username"], name: "index_users_on_username", unique: true
 
 end
