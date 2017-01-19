@@ -8,32 +8,32 @@ en:
       send_paranoid_instructions: "Se o seu endereço de e-mail existir no nosso banco de dados, você receberá um e-mail com instruções sobre como confirmar seu endereço de e-mail em alguns minutos."
     failure:
       already_authenticated: "Você já está inscrito."
-      inactive: "Sua conta Ainda não esta ativada."
-      invalid: "%{authentication_keys} inválida ou senha."
+      inactive: "Sua conta ainda não está ativada."
+      invalid: "%{authentication_keys} ou senha inválido."
       locked: "Sua conta está bloqueada."
       last_attempt: "Você tem mais uma tentativa antes de sua conta ser bloqueada."
-      not_found_in_database: " %{authentication_keys} inválida ou senha."
+      not_found_in_database: " %{authentication_keys} ou senha inválido."
       timeout: "Sua sessão expirou. Faça login novamente para continuar."
-      unauthenticated: "Você precisa fazer o login ou se inscrever antes de continuar."
+      unauthenticated: "Você precisa se logar ou se cadastrar antes de continuar."
       unconfirmed: "Você precisa confirmar seu endereço de e-mail antes de continuar."
     mailer:
       confirmation_instructions:
-        subject: "Confirmacao de instrucoes"
+        subject: "Instruções para a confirmação"
       reset_password_instructions:
-        subject: "Instrucoes de resetar a senha"
+        subject: "Instruções para resetar a senha"
       unlock_instructions:
-        subject: "Instrucoes de bloqueio"
+        subject: "Instruçõees de bloqueio"
       password_change:
         subject: "Senha alterada"
     omniauth_callbacks:
-      failure: "Nao pode autenticar voce de %{kind} por causa que \"%{reason}\"."
+      failure: "Não foi possível autenticar você de %{kind} por causa que \"%{reason}\"."
       success: "Autenticação correta de %{kind} conta."
     passwords:
-      no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
-      send_instructions: "You will receive an email with instructions on how to reset your password in a few minutes."
-      send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
-      updated: "Your password has been changed successfully. You are now signed in."
-      updated_not_active: "Your password has been changed successfully."
+      no_token: ""
+      send_instructions: "Você receberá um e-mail com instruções de como recuperar sua senha em poucos minutos."
+      send_paranoid_instructions: ""
+      updated: "Sua senha foi alterada com sucesso."
+      updated_not_active: "Sua senha foi alterada com sucesso."
     registrations:
       destroyed: ""
       signed_up: ""
@@ -47,16 +47,16 @@ en:
       signed_out: ""
       already_signed_out: ""
     unlocks:
-      send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
-      send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
-      unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+      send_instructions: "VOcê receberá um e-mail com instruções para desbloquear sua conta."
+      send_paranoid_instructions: "Se sua conta existir, vocẽ receberá um e-mail com instruções em poucos minutos"
+      unlocked: "Sua conta foi desbloqueada com sucesso."
   errors:
     messages:
-      already_confirmed: "was already confirmed, please try signing in"
-      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
-      expired: "has expired, please request a new one"
-      not_found: "not found"
-      not_locked: "was not locked"
+      already_confirmed: "já foi confirmada, por favor tente entrar novamente"
+      confirmation_period_expired: "precisa ser confirmada em %{period}, por favor solicite uma nova"
+      expired: "expirou, por favor crie uma nova"
+      not_found: "Não encontrado(a)"
+      not_locked: "Não está bloqueado(a)"
       not_saved:
-        one: "1 error prohibited this %{resource} from being saved:"
-        other: "%{count} errors prohibited this %{resource} from being saved:"
+        one: "Um erro proíbe o %{resource} de ser salvo:"
+        other: "%{count} errors proíbem o %{resource} de ser salvo:"
